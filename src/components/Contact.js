@@ -38,7 +38,7 @@ function Contact() {
                             <textarea class="w-full rounded p-[5px]" rows="4"></textarea>
                         </div>
                         <div class="w-full mb-[15px]">
-                            <div class="h-captcha" data-sitekey="ee5eb7c0-5ab4-4032-ba74-05509396983c"></div>
+                            <hCaptcha sitekey="ee5eb7c0-5ab4-4032-ba74-05509396983c" onVerify={this.onVerifyCaptcha}/>
                         </div>
                         <div class="flex justify-center">
                             <div class="bg-[#35e2fc] rounded-full py-[14px] px-[40px] w-[250px]">
