@@ -1,4 +1,9 @@
+import HCaptcha from '@hcaptcha/react-hcaptcha';
+
 function Contact() {
+    const onVerifyCaptcha = ( token ) => {
+        console.log("Verified: " + token);
+    }
     return (
         <div id="Contact" class="px-[15px] md:mx-[9px] lg:mx-[27.5px] 2xl:mx-[10%] py-[80px]">
             <div class="flex flex-wrap">
@@ -38,7 +43,7 @@ function Contact() {
                             <textarea class="w-full rounded p-[5px]" rows="4"></textarea>
                         </div>
                         <div class="w-full mb-[15px]">
-                            <hCaptcha sitekey="ee5eb7c0-5ab4-4032-ba74-05509396983c" onVerify={this.onVerifyCaptcha}/>
+                            <HCaptcha sitekey="ee5eb7c0-5ab4-4032-ba74-05509396983c" onVerify={onVerifyCaptcha} />
                         </div>
                         <div class="flex justify-center">
                             <div class="bg-[#35e2fc] rounded-full py-[14px] px-[40px] w-[250px]">
